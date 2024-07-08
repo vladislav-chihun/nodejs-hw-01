@@ -4,4 +4,4 @@ const generateContacts = async (number) => {
     createFakeContact(number);
 };
 
-generateContacts(1);
+generateContacts(5);

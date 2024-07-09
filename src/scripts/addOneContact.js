@@ -15,7 +15,7 @@ export const addOneContact = async () => {
         const dataBaseData = await fs.readFile(PATH_DB, { encoding: "utf-8" });
         const contacts = JSON.parse(dataBaseData);
         contacts.push(newContact);
-        await fs.writeFile(PATH_DB, JSON.stringify(contacts, null, 2), { encoding: "utf-8" });
+        await fs.writeFile(PATH_DB, JSON.stringify(contacts), { encoding: "utf-8" });
         console.log("Contact added");
     } catch (error) {
         console.error(error);

@@ -9,7 +9,7 @@ export const removeLastContact = async () => {
             await fs.writeFile(PATH_DB, JSON.stringify(contacts), { encoding: "utf-8" });
             console.log("Deleted last contact");
     } catch (error) {
-        console.error("Error removing last contact:", error);
+        console.error(error);
     }
 };
 

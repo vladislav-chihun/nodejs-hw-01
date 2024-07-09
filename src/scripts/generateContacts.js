@@ -8,9 +8,7 @@ const generateContacts = async (number) => {
         const dataBaseData = await fs.readFile(PATH_DB, { encoding: "utf-8" });
         const existingContacts = JSON.parse(dataBaseData);
         existingContacts.push(...newContacts);
-
         await fs.writeFile(PATH_DB, JSON.stringify(existingContacts), { encoding: "utf-8" });
-
         console.log(`Contacts added`);
     } catch (error) {
         console.error(error);
